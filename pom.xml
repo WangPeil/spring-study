@@ -13,6 +13,7 @@
         <module>spring-bean</module>
         <module>spring-config</module>
         <module>spring-aop</module>
+        <module>spring-mybatis</module>
     </modules>
     <properties>
         <guava.version>18.0</guava.version>
