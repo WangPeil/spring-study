@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/aop
         https://www.springframework.org/schema/aop/spring-aop.xsd
-        http://www.springframework.org/schema/tx
-        https://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
 
@@ -17,14 +14,6 @@
     <context:annotation-config/>
     <!-- 扫描指定包下的所有被注解的类-->
     <context:component-scan base-package="com.example.*"/>
-
-    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/my_test_db"/>
-        <property name="username" value="root"/>
-        <property name="password" value="root"/>
-    </bean>
-
     <!--spring aop的配置-->
     <!--    <bean id="userService" class="com.example.service.UserService"/>-->
 
@@ -40,21 +29,5 @@
     <!--    </aop:config>-->
 
     <!--    开启aop注解支持-->
-<!--        <aop:aspectj-autoproxy/>-->
-
-<!--        事务管理器配置-->
-<!--    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
-<!--        <property name="dataSource" ref="dataSource"/>-->
-<!--    </bean>-->
-
-<!--    &lt;!&ndash; 开启声明式事务&ndash;&gt;-->
-<!--    <tx:advice id="txAdvice" transaction-manager="transactionManager">-->
-<!--        &lt;!&ndash; 配置事务传播特性&ndash;&gt;-->
-<!--    </tx:advice>-->
-
-<!--    &lt;!&ndash;    aop 配置事务切入&ndash;&gt;-->
-<!--    <aop:config>-->
-<!--        <aop:pointcut id="pointcut" expression="execution(* com.example.service.*.*(..))"/>-->
-<!--        <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>-->
-<!--    </aop:config>-->
+    <aop:aspectj-autoproxy/>
 </beans>

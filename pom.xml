@@ -12,11 +12,13 @@
         <module>spring-mvc</module>
         <module>spring-bean</module>
         <module>spring-config</module>
+        <module>spring-aop</module>
     </modules>
     <properties>
         <guava.version>18.0</guava.version>
         <spring.framework.version>5.2.3.RELEASE</spring.framework.version>
         <servlet.jsp.version>2.3.3</servlet.jsp.version>
+        <aspectj.version>1.9.5</aspectj.version>
         <servlet.version>4.0.1</servlet.version>
         <junit.version>4.12</junit.version>
         <logback.version>1.2.3</logback.version>
@@ -47,6 +49,11 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
                 <version>${spring.framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.servlet.jsp</groupId>
