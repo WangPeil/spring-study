@@ -16,7 +16,7 @@
         <module>spring-mybatis</module>
     </modules>
     <properties>
-        <guava.version>18.0</guava.version>
+        <guava.version>23.0</guava.version>
         <spring.framework.version>5.2.3.RELEASE</spring.framework.version>
         <servlet.jsp.version>2.3.3</servlet.jsp.version>
         <aspectj.version>1.9.5</aspectj.version>
@@ -27,6 +27,7 @@
         <junit.version>4.12</junit.version>
         <logback.version>1.2.3</logback.version>
         <fastjson.version>1.2.66</fastjson.version>
+        <servlet.jstl.version>1.2</servlet.jstl.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -94,6 +95,11 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${servlet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${servlet.jstl.version}</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
