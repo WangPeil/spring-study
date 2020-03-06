@@ -40,21 +40,21 @@
     <!--    </aop:config>-->
 
     <!--    开启aop注解支持-->
-        <aop:aspectj-autoproxy/>
+<!--        <aop:aspectj-autoproxy/>-->
 
-    <!--    事务管理器配置-->
-    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
+<!--        事务管理器配置-->
+<!--    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+<!--        <property name="dataSource" ref="dataSource"/>-->
+<!--    </bean>-->
 
-    <!-- 开启声明式事务-->
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
-        <!-- 配置事务传播特性-->
-    </tx:advice>
+<!--    &lt;!&ndash; 开启声明式事务&ndash;&gt;-->
+<!--    <tx:advice id="txAdvice" transaction-manager="transactionManager">-->
+<!--        &lt;!&ndash; 配置事务传播特性&ndash;&gt;-->
+<!--    </tx:advice>-->
 
-    <!--    aop 配置事务切入-->
-    <aop:config>
-        <aop:pointcut id="pointcut" expression="execution(* com.example.service.*.*(..))"/>
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
-    </aop:config>
+<!--    &lt;!&ndash;    aop 配置事务切入&ndash;&gt;-->
+<!--    <aop:config>-->
+<!--        <aop:pointcut id="pointcut" expression="execution(* com.example.service.*.*(..))"/>-->
+<!--        <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>-->
+<!--    </aop:config>-->
 </beans>
