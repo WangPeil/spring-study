@@ -8,7 +8,7 @@
         select id, user_name, age from user order by age
     </select>
     <insert id="addUser" parameterType="com.example.pojo.User">
-        insert into user (user_name,age) values (#{user.name},#{user.age})
+        insert into user (user_name,age) values (#{name},#{age})
     </insert>
 
     <delete id="deleteUserById" parameterType="int">
@@ -20,7 +20,7 @@
     </select>
 
     <update id="updateUser" parameterType="com.example.pojo.User">
-        update user set name = #{user.name}, age = #{user.age} where id = #{id}
+        update user set user_name = #{name}, age = #{age} where id = #{id}
     </update>
 
 </mapper>
