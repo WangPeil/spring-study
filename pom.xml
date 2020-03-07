@@ -13,7 +13,6 @@
         <module>spring-bean</module>
         <module>spring-config</module>
         <module>spring-aop</module>
-        <module>spring-mybatis</module>
     </modules>
     <properties>
         <guava.version>23.0</guava.version>
@@ -21,8 +20,9 @@
         <servlet.jsp.version>2.3.3</servlet.jsp.version>
         <aspectj.version>1.9.5</aspectj.version>
         <mybatis.version>3.5.4</mybatis.version>
+        <mybatis.spring.version>2.0.3</mybatis.spring.version>
         <mysql.version>5.1.17</mysql.version>
-        <dbcp2.version>2.7.0</dbcp2.version>
+        <c3p0.version>0.9.5.2</c3p0.version>
         <servlet.version>4.0.1</servlet.version>
         <junit.version>4.12</junit.version>
         <logback.version>1.2.3</logback.version>
@@ -77,15 +77,22 @@
                 <version>${mybatis.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis.spring.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-dbcp2</artifactId>
-                <version>${dbcp2.version}</version>
+                <groupId>com.mchange</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>${c3p0.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>javax.servlet.jsp</groupId>
                 <artifactId>javax.servlet.jsp-api</artifactId>
