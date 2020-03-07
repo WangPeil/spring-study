@@ -15,6 +15,7 @@
         <module>servlet</module>
         <module>hello-mvc</module>
         <module>mvc</module>
+        <module>RESTFul</module>
     </modules>
     <dependencies>
         <dependency>
