@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>servlet</module>
+        <module>hello-mvc</module>
+        <module>mvc</module>
     </modules>
     <dependencies>
         <dependency>
