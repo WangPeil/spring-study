@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.example">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <context:annotation-config/>
+    <!-- 1.引入外部配置文件-->
+    <context:property-placeholder location="classpath:db.properties"/>
+
+    <!-- 2.连接池-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+          destroy-method="close">
+        <property name="driverClass" value="${driver}"/>
+        <property name="jdbcUrl" value="${url}"/>
+        <property name="user" value="${user}"/>
+        <property name="password" value="${password}"/>
+        <!-- c3p0连接池配置-->
+        <property name="initialPoolSize" value="${initialPoolSize}"/>
+        <property name="maxPoolSize" value="${maxPoolSize}"/>
+        <property name="minPoolSize" value="${minPoolSize}"/>
+        <property name="maxIdleTime" value="${maxIdleTime}"/>
+    </bean>
+
+    <!-- 3.SqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 绑定配置文件-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:mapper/UserMapper.xml"/>
+    </bean>
+    <!-- 4.配置扫描dao接口包-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 注入SQLSessionFactory-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="com.example.dao"/>
+    </bean>
+</beans>
