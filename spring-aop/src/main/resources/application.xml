@@ -18,12 +18,12 @@
     <!-- 扫描指定包下的所有被注解的类-->
     <context:component-scan base-package="com.example.*"/>
 
-    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/my_test_db"/>
-        <property name="username" value="root"/>
-        <property name="password" value="root"/>
-    </bean>
+<!--    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">-->
+<!--        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+<!--        <property name="url" value="jdbc:mysql://localhost:3306/my_test_db"/>-->
+<!--        <property name="username" value="root"/>-->
+<!--        <property name="password" value="root"/>-->
+<!--    </bean>-->
 
     <!--spring aop的配置-->
     <!--    <bean id="userService" class="com.example.service.UserService"/>-->
