@@ -31,7 +31,7 @@
         <logback.version>1.2.3</logback.version>
         <fastjson.version>1.2.73</fastjson.version>
         <dubbo.version>2.6.5</dubbo.version>
-        <zookeeper.version>3.4.6</zookeeper.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
         <curator.version>4.2.0</curator.version>
         <lombok.version>1.18.12</lombok.version>
         <sfl4j.version>1.7.25</sfl4j.version>
