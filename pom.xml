@@ -27,7 +27,7 @@
         <mysql.version>8.0.15</mysql.version>
         <c3p0.version>0.9.5.2</c3p0.version>
         <servlet.version>4.0.1</servlet.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <logback.version>1.2.3</logback.version>
         <fastjson.version>1.2.73</fastjson.version>
         <dubbo.version>2.6.5</dubbo.version>
