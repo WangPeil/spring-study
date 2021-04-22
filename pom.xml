@@ -22,7 +22,7 @@
         <guava.version>23.0</guava.version>
         <spring.framework.version>5.2.10.RELEASE</spring.framework.version>
         <servlet.jsp.version>2.3.3</servlet.jsp.version>
-        <mybatis.version>3.5.4</mybatis.version>
+        <mybatis.version>3.5.6</mybatis.version>
         <mybatis.spring.version>2.0.3</mybatis.spring.version>
         <mysql.version>8.0.15</mysql.version>
         <c3p0.version>0.9.5.2</c3p0.version>
